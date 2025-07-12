@@ -1,0 +1,24 @@
+{
+    "name": "userscript-webpack-patcher",
+    "private": true,
+    "version": "0.0.1",
+    "type": "module",
+    "exports": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+    },
+    "scripts": {
+        "build": "tsup"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.31.0",
+        "@stylistic/eslint-plugin": "^5.1.0",
+        "@total-typescript/ts-reset": "^0.6.1",
+        "@types/greasemonkey": "^4.0.7",
+        "eslint": "^9.31.0",
+        "tsup": "^8.5.0",
+        "typescript": "~5.8.3",
+        "typescript-eslint": "^8.36.0"
+    },
+    "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad"
+}
