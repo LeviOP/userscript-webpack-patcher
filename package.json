@@ -1,6 +1,6 @@
 {
     "name": "userscript-webpack-patcher",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Library meant for use in userscripts that allows for the simple patching of webpack modules.",
     "homepage": "https://github.com/LeviOP/userscript-webpack-patcher#readme",
     "bugs": {
@@ -11,9 +11,8 @@
     "exports": {
         "types": "./dist/userscript-webpack-patcher.d.ts",
         "import": "./dist/userscript-webpack-patcher.js",
-        "browser": "./dist/userscript-webpack-patcher."
+        "browser": "./dist/userscript-webpack-patcher.global.js"
     },
-    "browser": "dist/userscript-webpack-patcher",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/LeviOP/userscript-webpack-patcher.git"
