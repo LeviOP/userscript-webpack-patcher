@@ -1,6 +1,6 @@
 {
     "name": "userscript-webpack-patcher",
-    "version": "0.0.3",
+    "version": "0.0.1",
     "description": "Library meant for use in userscripts that allows for the simple patching of webpack modules.",
     "homepage": "https://github.com/LeviOP/userscript-webpack-patcher#readme",
     "bugs": {
