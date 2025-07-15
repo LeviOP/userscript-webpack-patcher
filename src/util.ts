@@ -1,14 +1,25 @@
 import { proxyLazy } from "./lazy";
 import { webpackRequire } from "./main";
 
-export function findByProp(prop: string) {
-    if (webpackRequire === undefined) throw Error("webpackRequire is undefined!");
+export function findByProps(...props: string[]) {
     for (const id in webpackRequire.m) {
         const module = webpackRequire(id);
-        if (module[prop] !== undefined) return module;
+        if (props.every((p) => Object.hasOwn(module, p))) return module;
     }
 }
 
-export function findByPropLazy(prop: string) {
-    return proxyLazy(() => findByProp(prop));
+export function findByPropsLazy(...props: string[]) {
+    return proxyLazy(() => findByProps(...props));
+}
+
+export function findByCode(...code: string[]) {
+    for (const id in webpackRequire.m) {
+        const factory = webpackRequire.m[id]!;
+        const funcString = factory.toString();
+        if (code.every((s) => funcString.includes(s))) return webpackRequire(id);
+    }
+}
+
+export function findByCodeLazy(...code: string[]) {
+    return proxyLazy(() => findByCode(...code));
 }

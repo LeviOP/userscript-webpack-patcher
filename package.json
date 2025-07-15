@@ -1,10 +1,22 @@
 {
     "name": "userscript-webpack-patcher",
     "version": "0.0.2",
-    "type": "module",
+    "description": "Library meant for use in userscripts that allows for the simple patching of webpack modules.",
+    "homepage": "https://github.com/LeviOP/userscript-webpack-patcher#readme",
+    "bugs": {
+        "url": "https://github.com/LeviOP/userscript-webpack-patcher/issues"
+    },
+    "license": "GPL-3.0-only",
+    "files": ["dist/userscript-webpack-patcher.*"],
     "exports": {
-        "import": "./dist/index.js",
-        "types": "./dist/index.d.ts"
+        "types": "./dist/userscript-webpack-patcher.d.ts",
+        "import": "./dist/userscript-webpack-patcher.js",
+        "browser": "./dist/userscript-webpack-patcher."
+    },
+    "browser": "dist/userscript-webpack-patcher",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LeviOP/userscript-webpack-patcher.git"
     },
     "scripts": {
         "dev": "tsup --watch src/**/*.ts",
@@ -12,10 +24,14 @@
     },
     "devDependencies": {
         "@eslint/js": "^9.31.0",
+        "@rollup/plugin-typescript": "^12.1.4",
         "@stylistic/eslint-plugin": "^5.1.0",
         "@total-typescript/ts-reset": "^0.6.1",
         "@types/greasemonkey": "^4.0.7",
         "eslint": "^9.31.0",
+        "rollup": "^4.45.0",
+        "rollup-plugin-dts": "^6.2.1",
+        "tslib": "^2.8.1",
         "tsup": "^8.5.0",
         "typescript": "~5.8.3",
         "typescript-eslint": "^8.36.0"

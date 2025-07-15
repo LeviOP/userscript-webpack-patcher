@@ -42,7 +42,7 @@ function ourEval(string: string, injected: any[]): any {
     return result;
 }
 
-export let webpackRequire: WebpackRequire | undefined;
+export let webpackRequire: WebpackRequire;
 let gPatches: Patch[];
 
 const moduleFactoriesHandler: ProxyHandler<WebpackRequire["m"]> = {
